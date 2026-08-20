@@ -15,7 +15,9 @@ export function Hero() {
         <hr className="rule-double" />
 
         <Reveal>
-          <figure className="mt-10 sm:mt-14">
+          {/* w-fit shrinks the figure to the quote, so the credit right-aligns
+              to the closing quote mark rather than to the page edge. */}
+          <figure className="mt-10 w-fit sm:mt-14">
             <blockquote>
               {/* One line at every width, so the size is driven by the viewport
                   and capped once the shell stops growing. */}
@@ -23,7 +25,7 @@ export function Hero() {
                 &ldquo;{profile.headline}&rdquo;
               </p>
             </blockquote>
-            <figcaption className="label mt-6">
+            <figcaption className="label mt-6 text-right">
               &mdash;&ensp;{profile.headlineCredit}
             </figcaption>
           </figure>
