@@ -54,6 +54,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${newsreader.variable} ${plex.variable} ${plexMono.variable} h-full`}
     >
+      <head>
+        {/* Browsers restore the previous scroll offset on reload, which drops a
+            returning visitor into the middle of the page. Opt out of that for
+            reloads only, so back and forward still return you to your place. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(!("scrollRestoration"in history))return;var n=performance.getEntriesByType("navigation")[0];if(!n||n.type!=="reload"||location.hash)return;history.scrollRestoration="manual";var t=function(){window.scrollTo(0,0)};t();document.addEventListener("DOMContentLoaded",t);addEventListener("load",function(){t();history.scrollRestoration="auto"});})();`,
+          }}
+        />
+      </head>
       <body className="grain flex min-h-full flex-col">
         <a
           href="#main"
