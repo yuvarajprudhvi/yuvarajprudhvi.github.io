@@ -17,7 +17,9 @@ export function Hero() {
         <Reveal>
           <figure className="mt-10 sm:mt-14">
             <blockquote>
-              <p className="serif max-w-[15ch] text-balance text-[3rem] italic leading-[0.98] tracking-[-0.02em] sm:text-[4.75rem] lg:text-[6rem]">
+              {/* One line at every width, so the size is driven by the viewport
+                  and capped once the shell stops growing. */}
+              <p className="serif whitespace-nowrap text-[min(5.4vw,4.4rem)] italic leading-[1.1] tracking-[-0.02em]">
                 &ldquo;{profile.headline}&rdquo;
               </p>
             </blockquote>
