@@ -214,6 +214,3 @@ export const timeline = [
     text: "TryHackMe in the evenings from the first year, which is where most of the useful learning happened. Fifty-odd rooms later it put me in the top 15% in India.",
   },
 ];
-
-export const colophon =
-  "Set in Newsreader and IBM Plex. Built with Next.js. Every screenshot on this site was pulled out of the original PDF and redacted by hand before it went up.";
