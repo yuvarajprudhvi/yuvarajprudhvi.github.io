@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build static export
+        # Baked into the HTML: og:image and canonical URLs are absolute, so this
+        # has to match the live origin or every link preview breaks.
+        env:
+          NEXT_PUBLIC_SITE_URL: https://yuvarajprudhvi.github.io
+        run: npm run build
+
+      - name: Give the social card a file extension
+        # `next build` writes the OG image as an extensionless PNG. GitHub Pages
+        # infers content type from the extension and has no way to override it,
+        # so without this the card is served as a generic binary and LinkedIn
+        # and WhatsApp refuse to render the preview.
+        run: |
+          cp out/opengraph-image out/og.png
+          find out -type f \( -name '*.html' -o -name '*.txt' \) \
+            -exec sed -i 's|/opengraph-image|/og.png|g' {} +
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
