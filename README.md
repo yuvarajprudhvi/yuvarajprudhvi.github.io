@@ -44,13 +44,8 @@ To edit copy, change `content/*.ts` — nothing else needs touching.
 Covered: the Okta tenant hostname, the org slug, browser tab titles exposing it,
 the disposable test-account addresses, and Sumo Logic search-session URLs.
 
-The CV at `public/reports/yuvaraj-prudhvi-cv.pdf` is generated, not hand-edited:
-
-```bash
-python3 scripts/build_cv.py public/reports/yuvaraj-prudhvi-cv.pdf
-```
-
-Edit the content in `scripts/build_cv.py` and re-run. It warns if the page overflows.
+The CV at `public/reports/yuvaraj-prudhvi-cv.pdf` is the resume PDF, dropped in
+as-is. To update it, replace the file at that path.
 
 To regenerate the screenshots after changing the source PDFs:
 
