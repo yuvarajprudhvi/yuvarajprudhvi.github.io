@@ -9,7 +9,7 @@ export function Footer() {
         <p className="label mt-3">
           {profile.location} &nbsp;/&nbsp; {profile.availability}
         </p>
-        <p className="label mt-1.5">{profile.relocation}</p>
+        <p className="label mt-1.5">{profile.locationLine}</p>
       </Shell>
     </footer>
   );

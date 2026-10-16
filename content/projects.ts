@@ -48,7 +48,7 @@ export const projects: Project[] = [
     title: "Operation Soft Cell",
     kicker: "APT campaign analysis",
     summary:
-      "A state-backed intrusion that sat inside telecom networks for years and walked out with call records instead of money. Four waves, one very late detection, and a hard lesson about monitoring you have not deployed yet.",
+      "A state-backed intrusion that sat inside telecom networks for years and walked out with call records instead of money. Four waves, one very late detection, and a hard lesson about monitoring you have not deployed yet. Reviewed CVEs from the CISA Known Exploited Vulnerabilities (KEV) catalog alongside the campaign.",
     track: "blue",
     role: "Threat research and write-up",
     tools: ["MITRE ATT&CK", "OSINT", "Vendor reporting"],

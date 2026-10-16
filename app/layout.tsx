@@ -35,15 +35,13 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${profile.name} — security operations and IT infrastructure`,
+    default: `${profile.name} — ${profile.roles}`,
     template: `%s — ${profile.name}`,
   },
-  description:
-    "SIEM deployment, identity and access management, threat intelligence and APT analysis, written up in full with the screenshots to back it up.",
+  description: `${profile.name} — ${profile.roles}. SIEM deployment, identity and access management, threat intelligence and APT analysis, written up in full with the screenshots to back it up.`,
   openGraph: {
-    title: `${profile.name} — security operations and IT infrastructure`,
-    description:
-      "Four hands-on security write-ups: SIEM deployment, IAM, threat intelligence, APT analysis.",
+    title: `${profile.name} — ${profile.roles}`,
+    description: `${profile.name} — ${profile.roles}. Four hands-on security write-ups: SIEM deployment, IAM, threat intelligence, APT analysis.`,
     type: "website",
   },
 };
