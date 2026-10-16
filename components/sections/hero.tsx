@@ -69,9 +69,9 @@ export function Hero() {
                 </dd>
               </div>
               <div className="grid grid-cols-12 gap-4 border-b border-rule py-3">
-                <dt className="label col-span-4 pt-0.5">Relocation</dt>
+                <dt className="label col-span-4 pt-0.5">Location</dt>
                 <dd className="col-span-8 text-[0.9375rem] text-ink-2">
-                  {profile.relocation}
+                  {profile.locationLine}
                 </dd>
               </div>
               <div className="grid grid-cols-12 gap-4 border-b border-rule py-3">

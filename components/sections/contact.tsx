@@ -46,8 +46,8 @@ export function Contact() {
               <span className="label text-[color:#b9b2a4]">Contact</span>
             </div>
             <h2 className="mt-6 max-w-[14ch] text-balance text-[2.5rem] leading-[1.05] text-paper sm:text-[3.5rem]">
-              If you are hiring for a SOC or a service desk, I would like to
-              hear from you.
+              If you are hiring for SOC L1 or IAM roles in Bangalore, I would
+              like to hear from you.
             </h2>
             <p className="mt-6 max-w-[46ch] text-[1.0625rem] leading-[1.72]">
               Happy to walk through anything on this site line by line. The
@@ -74,10 +74,10 @@ export function Contact() {
               </div>
               <div className="grid grid-cols-12 gap-4 border-b border-[color:rgba(247,244,238,0.24)] py-3">
                 <dt className="label col-span-4 pt-0.5 text-[color:#b9b2a4]">
-                  Relocation
+                  Location
                 </dt>
                 <dd className="col-span-8 text-[0.9375rem]">
-                  {profile.relocation}
+                  {profile.locationLine}
                 </dd>
               </div>
             </dl>

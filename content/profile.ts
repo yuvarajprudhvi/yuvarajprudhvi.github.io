@@ -7,7 +7,7 @@ export const profile = {
   initials: "YP",
 
   /* what a recruiter needs in the first five seconds */
-  roles: "SOC Analyst · IT Support",
+  roles: "SOC L1 and IAM analyst",
   qualification: `${DEGREE}, 2026`,
 
   /* hero */
@@ -18,9 +18,9 @@ export const profile = {
 
   location: "Bangalore, India",
   availability: "Available now",
-  relocation: "Open to relocating to the UAE, employment visa required",
+  locationLine: "Bangalore, India. Available to join immediately",
 
-  email: "yuvarajprudhvi.works@protonmail.com",
+  email: "yuvaraj.prudhvi@my-privatemail.com",
   phoneDisplay: "+91 79931 75987",
   phoneTel: "+917993175987",
   whatsapp: "https://wa.me/917993175987",
@@ -77,9 +77,12 @@ export const tracks: Track[] = [
         href: "/work/ibm-x-force",
       },
       {
-        text: "Took apart a four-year state-sponsored telecom intrusion, mapped it to ATT&CK, and wrote the recommendations a defender could act on the same week.",
+        text: "Took apart a multi-year state-sponsored telecom intrusion, mapped it across 11 MITRE ATT&CK tactics, and wrote the recommendations a defender could act on the same week.",
         evidence: "Operation Soft Cell",
         href: "/work/operation-soft-cell",
+      },
+      {
+        text: "Endpoint detection exercise: built a Python keylogger in an isolated lab to study how keystroke-capture malware works and how to detect it on an endpoint.",
       },
       {
         text: "Fifty-odd TryHackMe rooms on triage, log review and root cause, most of them against a clock, plus the Jr Penetration Tester path.",
@@ -187,13 +190,13 @@ export const timeline = [
     year: "2026",
     title: "Four write-ups in one month",
     org: "SIEM, IAM, threat intel, APT analysis",
-    text: "August was the month it came together. A Sumo Logic deployment on my own AWS VM, five Okta labs including the Active Directory integration, a sweep through IBM X-Force, and Operation Soft Cell. Everything on this site was built in that stretch.",
+    text: "August was the month it came together. A Sumo Logic deployment on my own AWS VM, five Okta labs including the Active Directory integration, a sweep through IBM X-Force, and Operation Soft Cell. The four write-ups on this site were done in that stretch.",
   },
   {
     year: "2026",
     title: "Graduated",
     org: DEGREE,
-    text: "SRM University AP, May 2026. Network security, cyber forensics and vulnerability analysis on the timetable. Looking for a first role in a SOC or on a service desk, in India or the UAE.",
+    text: "SRM University AP, May 2026. Network security, cyber forensics and vulnerability analysis on the timetable. Looking for a first full-time role as a SOC L1 or IAM analyst in Bangalore.",
   },
   {
     year: "2025",
