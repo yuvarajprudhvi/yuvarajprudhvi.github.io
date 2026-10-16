@@ -20,7 +20,7 @@ export const profile = {
   availability: "Available now",
   locationLine: "Bangalore, India. Available to join immediately",
 
-  email: "yuvaraj.prudhvi@my-privatemail.com",
+  email: "yuvarajprudhvi.works@protonmail.com",
   phoneDisplay: "+91 79931 75987",
   phoneTel: "+917993175987",
   whatsapp: "https://wa.me/917993175987",
